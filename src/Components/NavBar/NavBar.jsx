@@ -81,7 +81,7 @@ function NavBar() {
                     {departmentMenuVisible && (
                       <select id="deptSelectMenu" onChange={(e) => (window.location = e.target.value)}>
                         <option value="">Department</option>
-                        <option value="./attendance">CSE-A/P&S</option>
+                        <option value="/attendance">CSE-A/P&S</option>
                         <option value="ece">ECE-B/P&S</option>
                         <option value="eee">EEE-A/P&S</option>
                       </select>
