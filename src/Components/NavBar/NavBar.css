@@ -1,0 +1,164 @@
+/* General Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: red;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.nav-left-section {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu-links li {
+  position: relative;
+}
+
+.nav-menu-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-menu-links a:hover {
+  color: #0073e6;
+}
+
+/* Dropdown Styling */
+.menu-dropdown {
+  position: relative;
+}
+
+/* Attendance Dropdown Styling */
+.menu-drop-container {
+  position: absolute;
+  top:30px;
+  right:-30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 100;
+  width: 150px;
+ 
+}
+
+.menu-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Remove gap between items */
+  align-items:center;
+  font-weight:bold;
+  
+  
+}
+
+.menu-dropdown-content select,
+.menu-dropdown-content option {
+  background-color: #f9f9f9;
+  color: #151719;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  width: 100%;
+  text-align: center;
+   appearance:none;
+   
+   
+}
+
+.menu-dropdown-content select:hover,
+.menu-dropdown-content option:hover {
+  background-color: #e0e0e0; /* Hover effect */
+}
+
+/* Adjusting individual options for visibility */
+#classSelectDropdown, #registerMenuSelect, #activityDiaryMenuSelect {
+  font-size: 14px;
+  padding: 10px;
+  color: #333;
+}
+
+/* Account Dropdown Styling */
+.nav-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account-menu {
+  position: relative;
+}
+
+.account-menu-button {
+  background-color: #e6e7e8;
+  color: #2e2c2c;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.account-menu-button:hover {
+  background-color: #005bb5;
+}
+
+.account-menu-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 100;
+  padding: 10px;
+  width: 150px;
+}
+
+.account-menu-content a {
+  display: block;
+  padding: 8px;
+  color: #333;
+  text-decoration: none;
+}
+
+.account-menu-content a:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Additional Styling */
+#classSelectDropdown,
+#deptSelectMenu,
+#registerMenuSelect,
+#activityDiaryMenuSelect {
+  font-size: 14px;
+}
+#attendance:hover ~ .menu-dropdown-content{
+  display:block;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-left-section, .nav-user-profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .account-menu-content {
+    width: 100%;
+  }
+}

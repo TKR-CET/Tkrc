@@ -1,0 +1,129 @@
+/* Attendance.css */
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 20px;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title-bar h2 {
+  color: #003366;
+}
+
+.batch-date-selectors {
+  display: flex;
+  align-items: center;
+}
+
+.batch-selector,
+.date-selector {
+  margin: 0 10px;
+  padding: 5px;
+}
+
+.go {
+  background-color: red;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.go:hover {
+  background-color: #FFA500;
+  color: #003366;
+}
+
+.subject {
+  color: #0073e6;
+  font-weight: bold;
+}
+
+.section {
+  color: #003366;
+  font-weight: bold;
+}
+
+/* Attendance Table Styling */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.attendance-table th {
+  background-color: #fad9d9;
+}
+
+.attendance-table td:nth-child(4) {
+  color: purple;
+}
+
+.table1 {
+  background-color: #fad9d9;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333333;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  background-color: #555555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  background-color: #e6adad;
+  padding: 10px;
+}
