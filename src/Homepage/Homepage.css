@@ -96,6 +96,34 @@ h1, h2, h3, h4, h5, h6 {
 #delegate-name{
   color:red;
 }
+/* Footer */
+.footer {
+    position: fixed; /* Fixes the footer to the bottom of the viewport */
+    bottom: 0; /* Ensures it sticks to the bottom */
+    left: 0;
+    width: 100%; /* Spans the full width of the viewport */
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    z-index: 1000; /* Ensures it is always on top of other elements */
+}
+
+/* Responsive Design for Footer */
+@media only screen and (max-width: 768px) {
+    .footer {
+        font-size: 10px;
+        padding: 8px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .footer {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
 
 /* Delegates Section */
 .delegates img {
@@ -265,13 +293,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Footer */
-.footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    font-size: 12px;
-    padding: 10px;
-}
+
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
