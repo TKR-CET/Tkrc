@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 10px;
     }
     .vision p,.mission p{
-  font-size: 16px;
+  font-size: 13px;
     line-height: 1.7;
     text-align: justify;
     color: #333;
@@ -370,7 +370,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 15px;
   
     list-style-type: square;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 1.7;
     text-align: justify;
     color: #333;
@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 .about-campus p {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.7;
     text-align: justify;
     color: #333;
