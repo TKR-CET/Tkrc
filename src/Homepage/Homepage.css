@@ -87,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .about-campus h3{
   color:purple;
+  
 }
 
 .about-campus, .vision-mission, .login {
@@ -381,7 +382,7 @@ h1, h2, h3, h4, h5, h6 {
   display:flex;
   flex-direction: column;
   align-items: center;
-   font-size: 16px;
+   font-size: 14px;
     line-height: 1.7;
     text-align: justify;
     color: #333;
