@@ -309,10 +309,12 @@ border:solid 1px black;
 
     .header1 {
         flex-direction: column;
+         
     }
 
     #logo {
         height: 40px;
+         width:40px;
         margin-bottom: 5px;
     }
 
