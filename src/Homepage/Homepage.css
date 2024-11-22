@@ -31,7 +31,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #logo {
-    height: 50px;
+    height: 45px;
+width:45px;
     margin-right: 15px;
 background-color:white;
 border-radius:50%;
@@ -351,7 +352,8 @@ border:solid 1px black;
     }
 
     #logo {
-        height: 60px;
+        height:45px;
+width:50px
     }
 
     .delegates img {
