@@ -84,7 +84,7 @@ const Homepage = () => {
                         <img src={currentImage} alt={`Campus ${currentImageIndex + 1}`} />
                     </div>
                     <div className="about-campus">
-                        <h2>About TKRCET Campus</h2>
+                        <h3>About TKRCET Campus</h3>
                                          <p>TKR College of Engineering and Technology - a modern temple of learning, an off shoot of the TKR Educational Society was established in the year 2002 in a sprawling, lush green 20 acre campus at Meerpet, Hyderabad. The college provides a serene and tranquil environment to the students, boosting their mental potential and preparing them in all aspects to face the cut- throat global competition with a smile on the face and emerge victorious.</p>
                         
                         <p>Sri Teegala Krishna Reddy, the Mayor of Hyderabad, is the founder chairman of TKR Educational Society. A Philanthropist by nature, "the friend of man, to vice alone of foe", and an urge to see our students excelling themselves in all fields prompted him to start the educational society; making it easy for education to be within arm's length of even a rural student and providing them with an independent and easy in the for pursuing their dreams and making them come true and in the process upholding moral and ethical values.</p>
