@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 #logo {
     height: 50px;
     margin-right: 15px;
+background-color:white;
 }
 
 .marquee-container {
@@ -85,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius:10px;
   
 }
-.about-campus h3{
+.about-campus h2{
   color:purple;
   
 }
