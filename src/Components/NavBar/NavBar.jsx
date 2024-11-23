@@ -52,7 +52,7 @@ function NavBar() {
           <Link to="/timetable"><li>Timetable</li></Link>
           <li>
             <div className="menu-dropdown">
-              <button onClick={toggleAttendanceMenu} id="attendance">Attendance</button>
+              <a onClick={toggleAttendanceMenu} id="attendance">Attendance</a>
               {attendanceMenuVisible && (
                 <div className="menu-drop-container">
                   <div className="menu-dropdown-content">
