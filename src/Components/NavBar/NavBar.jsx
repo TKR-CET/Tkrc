@@ -105,6 +105,7 @@ function NavBar() {
             </div>
           )}
         </div>
+<h2>TKRCET</h2>
 <img src="./images/menu.png"/>
 
       </div>
