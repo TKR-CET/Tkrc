@@ -1,41 +1,40 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
 import "./NavBar.css";
 
 function NavBar() {
   const [attendanceMenuVisible, setAttendanceMenuVisible] = useState(false);
   const [accountMenuVisible, setAccountMenuVisible] = useState(false);
   const [departmentMenuVisible, setDepartmentMenuVisible] = useState(false);
-  const [classSelected, setClassSelected] = useState(false); // Track if a class is selected
+  const [classSelected, setClassSelected] = useState(false);
 
   const navRef = useRef(null);
+  const navigate = useNavigate();
 
   const toggleAttendanceMenu = () => {
     setAttendanceMenuVisible(!attendanceMenuVisible);
-    setAccountMenuVisible(false); // Close Account dropdown if open
+    setAccountMenuVisible(false);
     setClassSelected(false); // Reset class selection when reopening Attendance
   };
 
   const toggleAccountMenu = () => {
     setAccountMenuVisible(!accountMenuVisible);
-    setAttendanceMenuVisible(false); // Close Attendance dropdown if open
+    setAttendanceMenuVisible(false);
   };
 
   const handleClassChange = (e) => {
     const selectedValue = e.target.value;
-    setClassSelected(!!selectedValue); // Set classSelected to true if a class is chosen
-    setDepartmentMenuVisible(!!selectedValue); // Show department dropdown if class is selected
+    setClassSelected(!!selectedValue);
+    setDepartmentMenuVisible(!!selectedValue);
   };
 
-  // Hide dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setAttendanceMenuVisible(false);
         setAccountMenuVisible(false);
         setDepartmentMenuVisible(false);
-        setClassSelected(false); // Reset class selection when clicking outside
+        setClassSelected(false);
       }
     };
 
@@ -49,41 +48,42 @@ function NavBar() {
     <nav ref={navRef}>
       <div className="nav-left-section">
         <ul className="nav-menu-links">
-          <Link to='/index'><li>Home</li></Link>
-          <Link to='/timetable'><li>Timetable</li></Link>
+          <Link to="/index"><li>Home</li></Link>
+          <Link to="/timetable"><li>Timetable</li></Link>
           <li>
             <div className="menu-dropdown">
-              <a href="#" onClick={toggleAttendanceMenu} id="attendance">Attendance</a>
+              <button onClick={toggleAttendanceMenu} id="attendance">Attendance</button>
               {attendanceMenuVisible && (
                 <div className="menu-drop-container">
                   <div className="menu-dropdown-content">
-                    {/* Class dropdown */}
                     <select id="classSelectDropdown" onChange={handleClassChange}>
                       <option value="">Class</option>
                       <option value="class1">Year-1</option>
                       <option value="class2">Year-2</option>
                     </select>
-
-                    {/* Show Register and Activity Diary initially, hide after class selection */}
                     {!classSelected && (
                       <>
                         <select id="registerMenuSelect">
                           <option value="">Register</option>
                         </select>
-                        <select id="activityDiaryMenuSelect" onChange={(e) => (window.location = e.target.value)}>
+                        <select
+                          id="activityDiaryMenuSelect"
+                          onChange={(e) => navigate(e.target.value)}
+                        >
                           <option value="">Activity</option>
                           <option value="/activity">Activity Diary</option>
                         </select>
                       </>
                     )}
-
-                    {/* Department dropdown, shown only after a class is selected */}
                     {departmentMenuVisible && (
-                      <select id="deptSelectMenu" onChange={(e) => (window.location = e.target.value)}>
+                      <select
+                        id="deptSelectMenu"
+                        onChange={(e) => navigate(e.target.value)}
+                      >
                         <option value="">Department</option>
                         <option value="/attendance">CSE-A/P&S</option>
-                        <option value="ece">ECE-B/P&S</option>
-                        <option value="eee">EEE-A/P&S</option>
+                        <option value="/ece">ECE-B/P&S</option>
+                        <option value="/eee">EEE-A/P&S</option>
                       </select>
                     )}
                   </div>
@@ -100,17 +100,13 @@ function NavBar() {
           <button className="account-menu-button" onClick={toggleAccountMenu}>Account</button>
           {accountMenuVisible && (
             <div className="account-menu-content">
-              <a href="#settings">Settings</a>
-               <a><Link to="/">Logout</Link></a>
+              <Link to="/settings">Settings</Link>
+              <Link to="/">Logout</Link>
             </div>
           )}
         </div>
-
-
-      </nav>
-
-
-
+      </div>
+    </nav>
   );
 }
 
