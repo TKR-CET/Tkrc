@@ -46,7 +46,7 @@ function NavBar() {
   }, []);
 
   return (
-    <div ref={navRef}>
+    <nav ref={navRef}>
       <div className="nav-left-section">
         <ul className="nav-menu-links">
           <Link to='/index'><li>Home</li></Link>
@@ -105,22 +105,11 @@ function NavBar() {
             </div>
           )}
         </div>
-<h2>TKRCET</h2>
-<img src="./images/menu.png"/>
-
-      </div>
 
 
-<div class="menu-list>
-<ul class="option-list"
-<li>home</li>
-<li>Timetable</li>
-<li>Attendance</li>
-<li>notifications<li>
-<li>account</li>
-</ul>
-</div>
-</div>
+      </nav>
+
+
 
   );
 }
