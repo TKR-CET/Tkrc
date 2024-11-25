@@ -1,5 +1,5 @@
 /* General Page Styles */
-.attendance-container {
+.attendance-container !important {
   max-width: 900px;
   margin: 20px auto;
   padding: 20px;
@@ -71,7 +71,7 @@
 }
 
 /* Table Styles */
-.attendance-table {
+.attendance-table !important{
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
