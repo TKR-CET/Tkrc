@@ -100,7 +100,7 @@
 }
 
 /* Radio Button Styles */
-.attendance-table input[type="radio"] {
+.attendance-table input[type="radio"] !important {
   appearance: none;
   width: 28px;
   height: 28px;
