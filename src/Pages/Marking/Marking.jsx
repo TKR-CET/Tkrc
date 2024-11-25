@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
- import './Marking.css';
+import './Marking.css';
 import Header from '../../Components/Header/Header';
 import NavBar from '../../Components/NavBar/NavBar';
 import {Link} from 'react-router-dom';
